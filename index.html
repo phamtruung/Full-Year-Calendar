@@ -14,13 +14,13 @@
         <div class="toolbar">
         <div class="toolbar-row">
             <input type="number" id="yearInput" value="2025" />
-            <button id="loadYear">≈</button>
+            <button id="loadYear" class="button-tool">≈</button>
         </div>
         <div class="toolbar-row">
-            <button id="goToday">⌂</button>
-            <button id="exportJson">↑</button>
+            <button id="goToday" class="button-tool">⌂</button>
+            <button id="exportJson" class="button-tool">↑</button>
             <input type="file" id="importJson" accept=".json" style="display: none;" />
-            <button id="importJsonBtn">↓</button>
+            <button id="importJsonBtn" class="button-tool">↓</button>
         </div>
         </div>
 
@@ -43,7 +43,7 @@
       <input type="datetime-local" id="endTime" />
 
       <label for="categoryInput">Type:</label>
-      <input type="text" id="categoryInput" placeholder="Work, Persional, ..." />
+      <input type="text" id="categoryInput" placeholder="Work, Personal, ..." />
 
       <label for="description">Name</label>
       <input type="text" id="description" placeholder="Event Name" />

@@ -1,7 +1,20 @@
 let events = [];
-let activeCategories = new Set(["work", "study", "personal"]);
+let activeCategories = new Set(["Work", "Study", "Personal", "Travel"]);
 const categoryColors = {};
-const colorPalette = ["#2196f3", "#4caf50", "#ff9800", "#9c27b0", "#e91e63", "#795548"];
+const colorPalette = [
+  "#d43e3eff", 
+  "#ca8b4fff", 
+  "#ccc340ff", 
+  "#50973bff", 
+  "#34aeb3ff", 
+  "#3e75c7ff", 
+  "#3e36b6ff", 
+  "#9e3db6ff", 
+  "#c72569ff", 
+  "#5e271aff", 
+  "#504634ff", 
+  "#2b412eff",
+];
 let colorIndex = 0;
 
 function getColorForCategory(cat) {
@@ -212,6 +225,8 @@ function loadFromLocalStorage() {
   if (data) {
     events = JSON.parse(data);
   }
+  activeCategories.clear();
+  events.forEach(e => activeCategories.add(e.category));
 }
 
 // Nút tải năm
