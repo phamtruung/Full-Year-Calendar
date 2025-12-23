@@ -26,7 +26,7 @@ function generateCalendar(year) {
   for (let week = 1; week <= 53; week++) {
     const weekLabel = document.createElement("div");
     weekLabel.className = "week-label";
-    weekLabel.textContent = "Tuần " + week;
+    weekLabel.textContent = "W " + week;
     calendar.appendChild(weekLabel);
 
     for (let day = 1; day <= 7; day++) {
@@ -157,9 +157,9 @@ function renderEvents() {
         const div = document.createElement("div");
         div.className = "event";
         div.style.backgroundColor = getColorForCategory(e.category);
-        div.textContent = dateStr === startDate.toISOString().split("T")[0]
-          ? `${e.start.split("T")[1]}-${e.end.split("T")[1]} ${e.desc}`
-          : `↔ ${e.desc}`;
+        div.innerHTML = dateStr === startDate.toISOString().split("T")[0]
+          ? `${e.desc}`
+          : `${e.desc}`;
         div.onclick = (ev) => {
           ev.stopPropagation();
           openEventForm(dateStr, i);
@@ -172,6 +172,7 @@ function renderEvents() {
 
   updateCategoryFilters();
 }
+
 
 function updateCategoryFilters() {
   const container = document.getElementById("categoryFilters");

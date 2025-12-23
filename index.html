@@ -11,14 +11,19 @@
     <header>
       <h1>Lịch tuần theo năm</h1>
 
-      <div class="toolbar">
-        <input type="number" id="yearInput" value="2025" />
-        <button id="loadYear">Tải năm</button>
-        <button id="goToday">Hôm nay</button>
-        <button id="exportJson">Xuất JSON</button>
-        <input type="file" id="importJson" accept=".json" style="display: none;" />
-        <button id="importJsonBtn">Nhập JSON</button>
-      </div>
+        <div class="toolbar">
+        <div class="toolbar-row">
+            <input type="number" id="yearInput" value="2025" />
+            <button id="loadYear">≈</button>
+        </div>
+        <div class="toolbar-row">
+            <button id="goToday">⌂</button>
+            <button id="exportJson">↑</button>
+            <input type="file" id="importJson" accept=".json" style="display: none;" />
+            <button id="importJsonBtn">↓</button>
+        </div>
+        </div>
+
 
       <div id="categoryFilters" class="filter-bar"></div>
     </header>

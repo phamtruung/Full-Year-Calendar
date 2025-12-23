@@ -36,12 +36,17 @@ header {
 
 .toolbar {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 0.5em;
   align-items: center;
-  justify-content: center;
-  gap: 1em;
   margin-bottom: 1em;
+}
+
+.toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
 }
 
 input,
@@ -82,26 +87,28 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 #calendar {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 1 cột tuần + 7 ngày */
   gap: 0.5em;
-  justify-content: flex-start;
+  width: 100%;
 }
 
 .week-label,
 .day {
-  width: calc(12.5% - 0.5em);
-  min-width: 90px;
+  width: 100%;
+  font-size: 0.8em;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .week-label {
-  text-align: center;
-  padding: 0.5em;
-  border-radius: var(--radius);
-  background: var(--bg);
-  box-shadow: inset 4px 4px 8px var(--shadow-dark),
-              inset -4px -4px 8px var(--shadow-light);
-  font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: var(--radius);
+    background: var(--bg);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark),
+                inset -4px -4px 8px var(--shadow-light);
+    font-weight: bold;
 }
 
 .day {
@@ -140,9 +147,9 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 0.2em 0.4em;
   border-radius: var(--radius);
   margin-top: 0.3em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   cursor: pointer;
 }
