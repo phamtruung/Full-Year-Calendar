@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lịch tuần theo năm</title>
+  <title>Year Calendar</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="container">
     <header>
-      <h1>Lịch tuần theo năm</h1>
+      <h1>Year Calendar</h1>
 
         <div class="toolbar">
         <div class="toolbar-row">
@@ -34,25 +34,25 @@
   <!-- Form tạo/sửa sự kiện -->
   <div id="eventForm" class="modal">
     <div class="modal-content">
-      <h3 id="formTitle">Tạo sự kiện</h3>
+      <h3 id="formTitle">New Event</h3>
 
-      <label for="startTime">Thời gian bắt đầu:</label>
+      <label for="startTime">Start:</label>
       <input type="datetime-local" id="startTime" />
 
-      <label for="endTime">Thời gian kết thúc:</label>
+      <label for="endTime">End:</label>
       <input type="datetime-local" id="endTime" />
 
-      <label for="categoryInput">Loại sự kiện:</label>
-      <input type="text" id="categoryInput" placeholder="Ví dụ: công việc, học tập..." />
+      <label for="categoryInput">Type:</label>
+      <input type="text" id="categoryInput" placeholder="Work, Persional, ..." />
 
-      <label for="description">Mô tả:</label>
-      <input type="text" id="description" placeholder="Nội dung sự kiện" />
+      <label for="description">Name</label>
+      <input type="text" id="description" placeholder="Event Name" />
 
       <div class="form-actions">
-        <button id="saveEvent">Lưu</button>
-        <button id="updateEvent">Cập nhật</button>
-        <button id="deleteEvent">Xoá</button>
-        <button id="closeForm">Đóng</button>
+        <button id="saveEvent">Save</button>
+        <button id="updateEvent">Update</button>
+        <button id="deleteEvent">Delete</button>
+        <button id="closeForm">Close</button>
       </div>
     </div>
   </div>

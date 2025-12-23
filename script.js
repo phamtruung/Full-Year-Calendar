@@ -66,7 +66,7 @@ function generateCalendar(year) {
 function openEventForm(date, eventIndex = null) {
   const form = document.getElementById("eventForm");
   form.style.display = "block";
-  document.getElementById("formTitle").textContent = eventIndex === null ? "Tạo sự kiện" : "Sửa sự kiện";
+  document.getElementById("formTitle").textContent = eventIndex === null ? "New Event" : "Update Event";
 
   const startInput = document.getElementById("startTime");
   const endInput = document.getElementById("endTime");
