@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lịch tuần theo năm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Lịch tuần theo năm</h1>
+
+      <div class="toolbar">
+        <input type="number" id="yearInput" value="2025" />
+        <button id="loadYear">Tải năm</button>
+        <button id="goToday">Hôm nay</button>
+        <button id="exportJson">Xuất JSON</button>
+        <input type="file" id="importJson" accept=".json" style="display: none;" />
+        <button id="importJsonBtn">Nhập JSON</button>
+      </div>
+
+      <div id="categoryFilters" class="filter-bar"></div>
+    </header>
+
+    <section id="calendar"></section>
+  </main>
+
+  <!-- Form tạo/sửa sự kiện -->
+  <div id="eventForm" class="modal">
+    <div class="modal-content">
+      <h3 id="formTitle">Tạo sự kiện</h3>
+
+      <label for="startTime">Thời gian bắt đầu:</label>
+      <input type="datetime-local" id="startTime" />
+
+      <label for="endTime">Thời gian kết thúc:</label>
+      <input type="datetime-local" id="endTime" />
+
+      <label for="categoryInput">Loại sự kiện:</label>
+      <input type="text" id="categoryInput" placeholder="Ví dụ: công việc, học tập..." />
+
+      <label for="description">Mô tả:</label>
+      <input type="text" id="description" placeholder="Nội dung sự kiện" />
+
+      <div class="form-actions">
+        <button id="saveEvent">Lưu</button>
+        <button id="updateEvent">Cập nhật</button>
+        <button id="deleteEvent">Xoá</button>
+        <button id="closeForm">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
