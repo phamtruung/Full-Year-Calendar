@@ -94,6 +94,7 @@ button:hover {
   grid-template-columns: minmax(30px, auto) repeat(7, minmax(0, 1fr));
   width: 100%;
   gap: 0;
+  border: 1px dashed var(--md-sys-color-outline);
 }
 
 .week-label {
@@ -135,7 +136,9 @@ button:hover {
   background-color: var(--md-sys-color-first);
   color: var(--md-sys-color-on-primary);
 }
-
+.day:hover {
+  background-color: var(--md-sys-color-primary);;
+}
 .event {
   display: block;
   background-color: var(--md-sys-color-primary);
@@ -242,3 +245,4 @@ button:hover {
   margin-top: 1rem;
   gap: var(--padding);
 }
+
