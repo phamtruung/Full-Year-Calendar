@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Year Calendar</title>
+  <title>Simple Calendar</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="container">
     <header>
-      <h1>Year Calendar</h1>
+      <h1>Full Year Calendar</h1>
 
-        <div class="toolbar">
+      <div class="toolbar">
         <div class="toolbar-row">
-            <input type="number" id="yearInput" value="2025" />
-            <button id="loadYear" class="button-tool">≈</button>
+          <input type="number" id="yearInput" value="2025" />
+          <button id="loadYear" title="Load Year">≈</button>
         </div>
         <div class="toolbar-row">
-            <button id="goToday" class="button-tool">⌂</button>
-            <button id="exportJson" class="button-tool">↑</button>
-            <input type="file" id="importJson" accept=".json" style="display: none;" />
-            <button id="importJsonBtn" class="button-tool">↓</button>
+          <button id="goToday" title="Today">⌂</button>
+          <button id="exportJson" title="Export">↑</button>
+          <input type="file" id="importJson" accept=".json" style="display: none;" />
+          <button id="importJsonBtn" title="Import">↓</button>
         </div>
-        </div>
-
+      </div>
 
       <div id="categoryFilters" class="filter-bar"></div>
     </header>
@@ -34,7 +34,7 @@
   <!-- Form tạo/sửa sự kiện -->
   <div id="eventForm" class="modal">
     <div class="modal-content">
-      <h3 id="formTitle">New Event</h3>
+      <h3 id="formTitle">Add Event</h3>
 
       <label for="startTime">Start:</label>
       <input type="datetime-local" id="startTime" />
@@ -42,11 +42,15 @@
       <label for="endTime">End:</label>
       <input type="datetime-local" id="endTime" />
 
-      <label for="categoryInput">Type:</label>
-      <input type="text" id="categoryInput" placeholder="Work, Personal, ..." />
+      <label for="categorySelect">Category:</label>
+      <div class="category-select">
+        <select id="categorySelect"></select>
+        <button id="addCategoryBtn" title="Add Category">+</button>
+        <button id="editCategoryBtn" title="Edit Category">≡</button>
+      </div>
 
-      <label for="description">Name</label>
-      <input type="text" id="description" placeholder="Event Name" />
+      <label for="description">Name:</label>
+      <input type="text" id="description" placeholder="Name of event" />
 
       <div class="form-actions">
         <button id="saveEvent">Save</button>
